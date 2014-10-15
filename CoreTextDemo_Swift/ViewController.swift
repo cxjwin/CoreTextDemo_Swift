@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var text = "123 hello [熊猫] http://t.cn/13eb24 你好..."
+        
+        var storage = text.transformText()
+        
+        println("\(storage.string)")
+        
+        textView.attributedText = storage;
     }
 
     override func didReceiveMemoryWarning() {
