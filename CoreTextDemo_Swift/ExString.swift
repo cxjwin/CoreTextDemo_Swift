@@ -31,14 +31,14 @@ extension String {
         
         let exp_emoji = NSRegularExpression(pattern: regex_emoji, options: .CaseInsensitive | .DotMatchesLineSeparators, error: nil)
         
-        let emojis = exp_emoji?.matchesInString(self, options: .ReportProgress, range: NSMakeRange(0, objcString.length))
+        let emojis = exp_emoji?.matchesInString(objcString, options: .ReportCompletion, range: NSMakeRange(0, objcString.length))
         
         var location: Int = 0
-        
-        for result in emojis as [NSTextCheckingResult] {
+				
+		for result in emojis as [NSTextCheckingResult] {
             let range = result.range
-            
-            let subStr = objcString.substringWithRange(NSMakeRange(location, range.location))
+			
+            let subStr = objcString.substringWithRange(NSMakeRange(location, range.location - location))
             let attSubStr = NSAttributedString(string: subStr)
             textStorage.appendAttributedString(attSubStr)
             

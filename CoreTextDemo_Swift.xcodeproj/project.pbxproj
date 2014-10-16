@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		554FC94819EF58A100AF8CBF /* CWCoreTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FC94719EF58A100AF8CBF /* CWCoreTextView.swift */; };
+		554FC94A19EF5D7D00AF8CBF /* CWTouchesGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FC94919EF5D7D00AF8CBF /* CWTouchesGestureRecognizer.swift */; };
 		55A64CF919EEC5D200811759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A64CF819EEC5D200811759 /* AppDelegate.swift */; };
 		55A64CFB19EEC5D200811759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A64CFA19EEC5D200811759 /* ViewController.swift */; };
 		55A64CFE19EEC5D200811759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A64CFC19EEC5D200811759 /* Main.storyboard */; };
@@ -131,6 +133,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		554FC94719EF58A100AF8CBF /* CWCoreTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWCoreTextView.swift; sourceTree = "<group>"; };
+		554FC94919EF5D7D00AF8CBF /* CWTouchesGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWTouchesGestureRecognizer.swift; sourceTree = "<group>"; };
+		554FC94C19EF612E00AF8CBF /* CoreTextDemo_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreTextDemo_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		55A64CF319EEC5D200811759 /* CoreTextDemo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreTextDemo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A64CF719EEC5D200811759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55A64CF819EEC5D200811759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -291,7 +296,10 @@
 				55A64CF819EEC5D200811759 /* AppDelegate.swift */,
 				55A64CFA19EEC5D200811759 /* ViewController.swift */,
 				55A64D1819EEC66A00811759 /* ExString.swift */,
+				554FC94719EF58A100AF8CBF /* CWCoreTextView.swift */,
+				554FC94919EF5D7D00AF8CBF /* CWTouchesGestureRecognizer.swift */,
 				55A64CFC19EEC5D200811759 /* Main.storyboard */,
+				554FC94C19EF612E00AF8CBF /* CoreTextDemo_Swift-Bridging-Header.h */,
 				55A64CFF19EEC5D200811759 /* Images.xcassets */,
 				55A64D0119EEC5D200811759 /* LaunchScreen.xib */,
 				55A64CF619EEC5D200811759 /* Supporting Files */,
@@ -640,7 +648,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55A64CFB19EEC5D200811759 /* ViewController.swift in Sources */,
+				554FC94A19EF5D7D00AF8CBF /* CWTouchesGestureRecognizer.swift in Sources */,
 				55A64D1919EEC66A00811759 /* ExString.swift in Sources */,
+				554FC94819EF58A100AF8CBF /* CWCoreTextView.swift in Sources */,
 				55A64CF919EEC5D200811759 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -766,9 +776,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoreTextDemo_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreTextDemo_Swift/CoreTextDemo_Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -776,9 +789,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoreTextDemo_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreTextDemo_Swift/CoreTextDemo_Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -835,6 +850,7 @@
 				55A64D1419EEC5D200811759 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55A64D1519EEC5D200811759 /* Build configuration list for PBXNativeTarget "CoreTextDemo_SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -843,6 +859,7 @@
 				55A64D1719EEC5D200811759 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
