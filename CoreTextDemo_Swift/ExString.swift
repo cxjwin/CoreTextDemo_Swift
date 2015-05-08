@@ -31,11 +31,11 @@ extension String {
         
         let exp_emoji = NSRegularExpression(pattern: regex_emoji, options: .CaseInsensitive | .DotMatchesLineSeparators, error: nil)
         
-        let emojis = exp_emoji?.matchesInString(objcString, options: .ReportCompletion, range: NSMakeRange(0, objcString.length))
+        let emojis = exp_emoji?.matchesInString(objcString as String, options: .ReportCompletion, range: NSMakeRange(0, objcString.length))
         
         var location: Int = 0
 				
-		for result in emojis as [NSTextCheckingResult] {
+		for result in emojis as! [NSTextCheckingResult] {
             let range = result.range
 			
             let subStr = objcString.substringWithRange(NSMakeRange(location, range.location - location))
@@ -74,9 +74,9 @@ extension String {
         let regex_http = "http://t.cn/[a-zA-Z0-9]+"
         let exp_http = NSRegularExpression(pattern: regex_http, options: .CaseInsensitive | .DotMatchesLineSeparators, error: nil)
         
-        let https = exp_http?.matchesInString(objcString, options: .ReportProgress, range: NSMakeRange(0, objcString.length))
+        let https = exp_http?.matchesInString(objcString as String, options: .ReportProgress, range: NSMakeRange(0, objcString.length))
         
-        for result in https as [NSTextCheckingResult] {
+        for result in https as! [NSTextCheckingResult] {
             let range = result.range
             textStorage.addAttribute(NSLinkAttributeName, value: objcString.substringWithRange(range), range: range)
         }

@@ -16,14 +16,14 @@ class CWTouchesGestureRecognizer: UIGestureRecognizer {
 		super.init(target: target, action: action)
 	}
 	
-	override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
-		let touch: UITouch? = touches.anyObject() as? UITouch
+	override func touchesBegan(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+		let touch: UITouch? = touches.first as? UITouch
 		startPoint = touch!.locationInView(self.view!)
 		self.state = .Began
 	}
 	
-	override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
-		let touch: UITouch? = touches.anyObject() as? UITouch
+	override func touchesMoved(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+		let touch: UITouch? = touches.first as? UITouch
 		let currentPoint = touch!.locationInView(self.view!)
 		
 		let distanceX = currentPoint.x - startPoint!.x
@@ -37,11 +37,11 @@ class CWTouchesGestureRecognizer: UIGestureRecognizer {
 		}
 	}
 	
-	override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
+	override func touchesEnded(touches: Set<NSObject>!, withEvent event: UIEvent!) {
 		self.state = .Ended
 	}
 	
-	override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
+	override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
 		self.state = .Cancelled
 	}
 	

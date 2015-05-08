@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 			paragraphStyle.hyphenationFactor = 2
 			paragraphStyle.paragraphSpacingBefore = 0
 			
-			return paragraphStyle.copy() as NSParagraphStyle
+			return paragraphStyle.copy() as! NSParagraphStyle
 		}()
 		
 		let range = NSMakeRange(0, storage.length)
